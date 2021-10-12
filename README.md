@@ -1,0 +1,2 @@
+# noticiasAPP
+proyecto académico Angular
