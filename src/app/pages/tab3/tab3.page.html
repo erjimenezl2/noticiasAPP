@@ -1,0 +1,21 @@
+<ion-header no-border [translucent]="true">
+  <ion-toolbar color='dark'>
+    <ion-title>
+      Favoritos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color='dark' [fullscreen]="true">
+
+  <ion-slides [options]="sliderOptions"
+      *ngIf="dataLocal.noticias.length===0">
+    <ion-slide>
+     <ion-label>No hay favoriots</ion-label>
+    </ion-slide>
+  </ion-slides>
+
+  <div *ngIf="dataLocal.noticias.length>0">
+    <app-noticias [noticias]="dataLocal.noticias" [enFavoritos]="true"></app-noticias>
+  </div>
+</ion-content>
